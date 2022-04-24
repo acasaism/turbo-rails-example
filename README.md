@@ -24,12 +24,17 @@ Copy the app/config/credentials.yml.example content into credentials file, and r
 ./bin/dev
 ````
 
-**3. Config database test**
+**3. Generate data**
+````
+rails db:seed
+````
+
+**4. Config database test**
 ````
 RAILS_ENV=test rails db:prepare
 ````
 
-**4. Launch tests**
+**5. Launch tests**
 ````
 rails test:system
 ````

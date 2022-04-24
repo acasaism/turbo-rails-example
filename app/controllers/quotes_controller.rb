@@ -18,7 +18,7 @@ class QuotesController < ApplicationController
     if @quote.save
       redirect_to quotes_path, notice: 'Quote was successfully created.'
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 
@@ -31,7 +31,7 @@ class QuotesController < ApplicationController
     if @quote.update(quote_params)
       redirect_to quotes_path, notice: 'Quote was successfully destroyed.'
     else
-      render :edit
+      render :edit, status: :unprocessable_entity
     end
   end
 
