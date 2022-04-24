@@ -1,0 +1,12 @@
+<%#= turbo_stream.prepend "quotes", partial: "quotes/quote", locals: { quote: @quote } %>
+
+<%# OR %>
+
+<%#= turbo_stream.prepend "quotes" do %>
+<%#= render partial: "quotes/quote", locals: { quote: @quote } OR  render @quote%>
+<%# end %>
+
+<%# OR %>
+
+<%= turbo_stream.prepend "quotes", @quote %>
+<%= turbo_stream.update Quote.new, "" %>

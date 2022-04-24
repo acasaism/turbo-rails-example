@@ -38,3 +38,27 @@ RAILS_ENV=test rails db:prepare
 ````
 rails test:system
 ````
+
+## Turbo notes
+
+### Turbo Stream
+#### Remove a Turbo Frame
+````
+turbo_stream.remove
+````
+#### Insert a Turbo Frame at the beginning/end of a list
+````
+turbo_stream.append
+turbo_stream.prepend
+````
+#### Insert a Turbo Frame before/after another Turbo Frame
+````
+turbo_stream.before
+turbo_stream.after
+````
+
+#### Replace or update the content of a Turbo Frame
+````
+turbo_stream.update
+turbo_stream.replace
+````

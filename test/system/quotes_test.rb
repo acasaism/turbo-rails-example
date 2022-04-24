@@ -1,9 +1,9 @@
 require "application_system_test_case"
 
-class QuotesTest < ApplicationSystemTestCase
 
+class QuotesTest < ApplicationSystemTestCase
   setup do
-    @quote = quotes(:first)
+    @quote = Quote.ordered.first
   end
 
   test "Showing a quote" do
@@ -48,5 +48,4 @@ class QuotesTest < ApplicationSystemTestCase
     click_on "Delete", match: :first
     assert_no_text @quote.name
   end
-
 end
