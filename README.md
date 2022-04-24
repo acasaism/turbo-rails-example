@@ -1,24 +1,35 @@
 # README
+### INFORMATION
+This is a project example on how to use turbo on rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### CONFIG
+The setups steps expect following tools installed on the system.
+- RVM
+- Ruby 3.1.2
+- Postgresql
 
-Things you may want to cover:
+**1. Config the credentials**
+````
+EDITOR=vim rails credentials:edit
+````
+Copy the app/config/credentials.yml.example content into credentials file, and replace the database password and secret key base
 
-* Ruby version
+**2. Setup project**
+````
+./bin/setup
+````
 
-* System dependencies
+**2. Launch project**
+````
+./bin/dev
+````
 
-* Configuration
+**3. Config database test**
+````
+RAILS_ENV=test rails db:prepare
+````
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+**4. Launch tests**
+````
+rails test:system
+````
